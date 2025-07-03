@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltWise Electric - Professional Electrical Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.344.0/lucide.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        /* Custom styles */
+        .hero-gradient {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+        }
+        .contact-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #4338ca 100%);
+        }
+        .transition-colors {
+            transition: color 0.3s ease;
+        }
+        .transition-shadow {
+            transition: box-shadow 0.3s ease;
+        }
+        .leading-tight {
+            line-height: 1.25;
+        }
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i data-lucide="zap" class="h-8 w-8 text-blue-600 mr-2"></i>
+                    <span class="font-bold text-xl text-gray-800">VoltWise Electric</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Reviews</a>
+                        <a href="#contact" class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Reviews</a>
+                <a href="#contact" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        Expert Electrical
+                        <span class="text-blue-600"> Solutions</span>
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600 leading-relaxed">
+                        Professional EV charger installation, electrical troubleshooting, and smart home automation. 
+                        Licensed, insured, and trusted by homeowners across the city.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                            Get Free Estimate
+                        </a>
+                        <a href="#contact" class="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-center flex items-center justify-center">
+                            <i data-lucide="phone" class="h-5 w-5 mr-2"></i>
+                            Emergency Service
+                        </a>
+                    </div>
+
+                    <div class="mt-8 flex items-center space-x-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i data-lucide="shield" class="h-5 w-5 text-green-500 mr-2"></i>
+                            Licensed & Insured
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="clock" class="h-5 w-5 text-green-500 mr-2"></i>
+                            24x6 Emergency
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img 
+                        src="https://images.pexels.com/photos/9800009/pexels-photo-9800009.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                        alt="Industrial EV charging station with electric vehicle technology" 
+                        class="rounded-lg shadow-2xl"
+                    />
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-gray-800 mt-1">500+ Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Professional Electrical Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From EV charger installations to smart home automation, we provide comprehensive electrical solutions 
+                    with a focus on safety, efficiency, and modern technology.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1: EV Charger Installation -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="car" class="h-8 w-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">EV Charger Installation</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Professional installation of Level 2 home EV charging stations. From permits to final inspection, we handle everything.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            EV Wall Connector
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            ChargePoint Home
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Level 2 Fast Charging
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Electrical Panel Upgrades
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-gray-50 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Service 2: Electrical Troubleshooting -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="h-8 w-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Electrical Troubleshooting</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Expert diagnosis and repair of electrical issues. Available 24x6 for emergency electrical problems.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Circuit Breaker Issues
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Outlet Problems
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Electrical Safety Inspections
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Code Compliance
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-gray-50 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Service 3: Smart Home Installation -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="home" class="h-8 w-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Smart Home Installation</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Transform your home with intelligent automation systems. Professional setup and configuration included.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Smart Lighting Systems
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Home Security Integration
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Voice Control Setup
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Energy Monitoring
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-gray-50 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Why Choose VoltWise Electric?
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        With over 15 years of experience in residential and commercial electrical work, 
+                        we've built our reputation on quality craftsmanship, safety, and customer satisfaction. 
+                        Our team stays current with the latest electrical codes and emerging technologies.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <i data-lucide="battery" class="h-6 w-6 text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">EV Charging Specialists</h4>
+                                <p class="text-sm text-gray-600 mt-1">Certified installers for all major EV charging brands</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="wifi" class="h-6 w-6 text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Smart Home Experts</h4>
+                                <p class="text-sm text-gray-600 mt-1">Advanced automation and IoT integration</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="shield" class="h-6 w-6 text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Safety First</h4>
+                                <p class="text-sm text-gray-600 mt-1">All work meets or exceeds electrical codes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="clock" class="h-6 w-6 text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Emergency Service</h4>
+                                <p class="text-sm text-gray-600 mt-1">24x6 availability for urgent electrical issues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img 
+                        src="https://images.pexels.com/photos/30641386/pexels-photo-30641386.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                        alt="Close-up of smart light switch and door handle" 
+                        class="rounded-lg shadow-xl"
+                    />
+                    <div class="absolute top-4 left-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="text-2xl font-bold text-blue-600">15+</div>
+                        <div class="text-sm text-gray-600">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Don't just take our word for it - hear from satisfied customers across the city.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">"Excellent EV charger installation! Professional, clean work, and explained everything clearly. My Tesla charges perfectly now."</p>
+                    <div>
+                        <div class="font-semibold text-gray-900">R. Kagan</div>
+                        <div class="text-sm text-gray-600">San Francisco, CA</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">"Fixed our electrical issues quickly and safely. Very knowledgeable about smart home systems too. Highly recommend!"</p>
+                    <div>
+                        <div class="font-semibold text-gray-900">L. Karas</div>
+                        <div class="text-sm text-gray-600">San Ramon, CA</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">"Outstanding smart home installation. The automated lighting and security system work flawlessly. Great attention to detail."</p>
+                    <div>
+                        <div class="font-semibold text-gray-900">M. Borsand</div>
+                        <div class="text-sm text-gray-600">Concord, CA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 contact-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-white max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Ready to Get Started?
+                    </h2>
+                    <p class="text-xl text-blue-100 mb-12 leading-relaxed">
+                        Contact us today for a free consultation and estimate. We're here to help with all your electrical needs.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="phone" class="h-8 w-8 text-white"></i>
+                            </div>
+                            <div class="font-semibold text-lg mb-2">Call or Text</div>
+                            <div class="text-blue-100 text-lg">(650) 210-8888</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="mail" class="h-8 w-8 text-white"></i>
+                            </div>
+                            <div class="font-semibold text-lg mb-2">Email</div>
+                            <div class="text-blue-100 text-lg">vova650@gmail.com</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="clock" class="h-8 w-8 text-white"></i>
+                            </div>
+                            <div class="font-semibold text-lg mb-2">Hours</div>
+                            <div class="text-blue-100 text-lg">Mon-Fri 7AM-6PM</div>
+                            <div class="text-blue-100 text-sm">Emergency 24x6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="zap" class="h-8 w-8 text-blue-400 mr-2"></i>
+                        <span class="font-bold text-xl">VoltWise Electric</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Professional electrical services including EV charger installation, troubleshooting, 
+                        and smart home automation. Licensed, insured, and trusted across the Bay Area.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i data-lucide="shield" class="h-4 w-4 mr-2"></i>
+                        Licensed and Fully Insured
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>EV Charger Installation</li>
+                        <li>Electrical Troubleshooting</li>
+                        <li>Smart Home Setup</li>
+                        <li>Panel Upgrades</li>
+                        <li>Emergency Service</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>(650) 210-8888</li>
+                        <li>vova650@gmail.com</li>
+                        <li>San Francisco Bay Area</li>
+                        <li>24x6 Emergency</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 VoltWise Electric. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('i');
+        let isMenuOpen = false;
+
+        mobileMenuButton.addEventListener('click', function() {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            
+            // Re-initialize icons after changing the icon
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking on menu links
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                isMenuOpen = false;
+                lucide.createIcons();
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
